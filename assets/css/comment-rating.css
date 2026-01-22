@@ -1,0 +1,192 @@
+/**
+ * Comment Rating Plugin Styles
+ * Modern, minimalist design that works universally across all themes
+ */
+
+.cr-voting-wrapper {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-right: 12px;
+    padding: 6px 12px;
+    background: rgba(0, 0, 0, 0.03);
+    border-radius: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    transition: background 0.2s ease;
+    vertical-align: middle;
+}
+
+.cr-voting-wrapper:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.cr-vote-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    background: transparent;
+    border: none;
+    border-radius: 50%;
+    color: #6b7280;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    outline: none;
+}
+
+.cr-vote-btn:hover {
+    background: rgba(0, 0, 0, 0.08);
+    transform: scale(1.1);
+}
+
+.cr-vote-btn:active {
+    transform: scale(0.95);
+}
+
+.cr-vote-btn svg {
+    display: block;
+    transition: transform 0.2s ease;
+}
+
+/* Upvote button */
+.cr-upvote {
+    color: #6b7280;
+}
+
+.cr-upvote:hover {
+    color: #10b981;
+}
+
+.cr-upvote.cr-active {
+    color: #10b981;
+    background: rgba(16, 185, 129, 0.1);
+}
+
+.cr-upvote.cr-active:hover {
+    background: rgba(16, 185, 129, 0.15);
+}
+
+/* Downvote button */
+.cr-downvote {
+    color: #6b7280;
+}
+
+.cr-downvote:hover {
+    color: #ef4444;
+}
+
+.cr-downvote.cr-active {
+    color: #ef4444;
+    background: rgba(239, 68, 68, 0.1);
+}
+
+.cr-downvote.cr-active:hover {
+    background: rgba(239, 68, 68, 0.15);
+}
+
+/* Vote count */
+.cr-vote-count {
+    display: inline-block;
+    min-width: 24px;
+    padding: 0 4px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #374151;
+    text-align: center;
+    transition: color 0.2s ease;
+}
+
+.cr-voting-wrapper.cr-positive .cr-vote-count {
+    color: #10b981;
+}
+
+.cr-voting-wrapper.cr-negative .cr-vote-count {
+    color: #ef4444;
+}
+
+/* Loading state */
+.cr-voting-wrapper.cr-loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.cr-voting-wrapper.cr-loading .cr-vote-btn {
+    cursor: wait;
+}
+
+/* Disabled state */
+.cr-vote-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Focus styles for accessibility */
+.cr-vote-btn:focus-visible {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    .cr-voting-wrapper {
+        background: rgba(255, 255, 255, 0.05);
+    }
+
+    .cr-voting-wrapper:hover {
+        background: rgba(255, 255, 255, 0.08);
+    }
+
+    .cr-vote-btn {
+        color: #9ca3af;
+    }
+
+    .cr-vote-btn:hover {
+        background: rgba(255, 255, 255, 0.1);
+    }
+
+    .cr-vote-count {
+        color: #d1d5db;
+    }
+}
+
+/* Responsive design */
+@media (max-width: 640px) {
+    .cr-voting-wrapper {
+        gap: 6px;
+        padding: 4px 10px;
+    }
+
+    .cr-vote-btn {
+        width: 28px;
+        height: 28px;
+    }
+
+    .cr-vote-btn svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    .cr-vote-count {
+        font-size: 13px;
+        min-width: 20px;
+    }
+}
+
+/* Animation for vote count changes */
+@keyframes cr-pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+}
+
+.cr-vote-count.cr-updated {
+    animation: cr-pulse 0.3s ease;
+}
