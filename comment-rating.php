@@ -1,11 +1,11 @@
 <?php
 /**
  * Plugin Name: Comment Rating
- * Plugin URI: https://github.com/yourusername/comment-rating
+ * Plugin URI: https://github.com/shestopalovpro/comment-rating
  * Description: Добавляет систему голосования (плюс/минус) для комментариев с современным дизайном
  * Version: 1.0.0
- * Author: Your Name
- * Author URI: https://yourwebsite.com
+ * Author: Sergey Shestopalov
+ * Author URI: https://shestopalovpro.ru
  * License: GPL v2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain: comment-rating
