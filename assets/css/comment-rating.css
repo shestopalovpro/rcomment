@@ -6,17 +6,16 @@
 .cr-voting-wrapper {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    margin: 0;
-    padding: 6px 12px;
+    gap: 6px;
+    margin: 0 0 0 12px;
+    padding: 4px 10px;
     background: rgba(0, 0, 0, 0.03);
     border-radius: 20px;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     transition: background 0.2s ease;
     vertical-align: middle;
-    position: relative;
-    float: right;
-    clear: both;
+    height: auto;
+    line-height: normal;
 }
 
 .cr-voting-wrapper:hover {
@@ -27,8 +26,8 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 32px;
-    height: 32px;
+    width: 28px;
+    height: 28px;
     padding: 0;
     background: transparent;
     border: none;
@@ -50,6 +49,8 @@
 
 .cr-vote-btn svg {
     display: block;
+    width: 16px;
+    height: 16px;
     transition: transform 0.2s ease;
 }
 
