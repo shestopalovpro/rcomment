@@ -8,24 +8,34 @@
 
     $(document).ready(function () {
 
+
         /**
-         * Move voting buttons next to reply link
+         * Move voting buttons next to reply link (to the left)
          */
         function positionVotingButtons() {
             $('.cr-voting-wrapper').each(function () {
                 const $wrapper = $(this);
-                const $comment = $wrapper.closest('.comment-body, .comment-content').parent();
-                const $replyLink = $comment.find('.reply, .comment-reply-link').first();
+                // Find the comment container
+                const $comment = $wrapper.closest('article, .comment, li[id^="comment-"]');
+                // Look for reply link in common locations
+                const $replyLink = $comment.find('.comment-reply-link, .reply a, a.comment-reply-link').first();
 
                 if ($replyLink.length) {
-                    // Move voting wrapper before reply link
-                    $wrapper.insertBefore($replyLink);
+                    // Move voting wrapper before (to the left of) reply link
+                    $replyLink.before($wrapper);
+                } else {
+                    // Fallback: look for .reply container
+                    const $replyContainer = $comment.find('.reply, .comment-metadata .reply').first();
+                    if ($replyContainer.length) {
+                        $replyContainer.prepend($wrapper);
+                    }
                 }
             });
         }
 
         // Position buttons on load
         positionVotingButtons();
+
 
         /**
          * Handle vote button clicks
