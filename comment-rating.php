@@ -3,7 +3,7 @@
  * Plugin Name: Comment Rating
  * Plugin URI: https://github.com/shestopalovpro/comment-rating
  * Description: Добавляет систему голосования (плюс/минус) для комментариев с современным дизайном
- * Version: 1.0.1
+ * Version: 1.0.2
  * Author: Sergey Shestopalov
  * Author URI: https://shestopalovpro.ru
  * License: GPL v2 or later
@@ -17,7 +17,7 @@ if (!defined('ABSPATH')) {
 }
 
 // Define plugin constants
-define('CR_VERSION', '1.0.1');
+define('CR_VERSION', '1.0.2');
 define('CR_PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('CR_PLUGIN_URL', plugin_dir_url(__FILE__));
 
