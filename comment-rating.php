@@ -17,7 +17,7 @@ if (!defined('ABSPATH')) {
 }
 
 // Define plugin constants
-define('CR_VERSION', '1.0.2');
+define('CR_VERSION', '1.0.4');
 define('CR_PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('CR_PLUGIN_URL', plugin_dir_url(__FILE__));
 
